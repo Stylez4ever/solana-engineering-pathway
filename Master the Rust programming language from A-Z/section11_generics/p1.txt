@@ -1,0 +1,11 @@
+fn main() {
+    println!("{}", identity::<&str>("Fine shit"));
+    println!("{}", identity::<bool>(true));
+    println!("{}", identity::<i32>(500));
+    println!("{}", identity::<u32>(36));
+    println!("{}", identity::<f64>(56.69));
+}
+
+fn identity<T>(value: T) -> T {
+    value
+}

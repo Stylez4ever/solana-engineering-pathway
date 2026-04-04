@@ -1,0 +1,18 @@
+#[derive(Debug)]
+enum Chessesteak<T> {
+    Plain,
+    Topping(T),
+}
+
+fn main() {
+    let mushroom = Chessesteak::Topping("mushroom");
+    let beans = Chessesteak::Topping(String::from("beans"));
+    let mut plain: Chessesteak<String> = Chessesteak::Plain;
+
+    plain = Chessesteak::Topping(String::from("Ice nigga"));
+    println!("{:?}", plain)
+}
+
+
+
+

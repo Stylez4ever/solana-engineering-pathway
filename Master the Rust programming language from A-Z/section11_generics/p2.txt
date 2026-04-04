@@ -1,0 +1,9 @@
+fn main() {
+    println!("{:?}", make_tuple(5, 6));
+}
+
+fn make_tuple<T, U>(first: T, second: U) -> (T, U) {
+    (first, second)
+}
+
+

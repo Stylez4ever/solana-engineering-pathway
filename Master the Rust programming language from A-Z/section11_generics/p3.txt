@@ -1,0 +1,50 @@
+#[derive(Debug)]
+struct TreasureChest<T> {
+    captain: String,
+    treasure: T,
+}
+
+impl TreasureChest<String> {
+    fn clean_treasure(self: &mut TreasureChest<String>) {
+        self.treasure = self.treasure.trim().to_string()
+    }
+}
+
+impl TreasureChest<[&str; 3]> {
+    fn amount_of_treasure(&self ) -> usize {
+        self.treasure.len()
+    }
+}
+
+impl<T> TreasureChest<T> {
+    fn capital_captain(self: &TreasureChest<T>) -> String {
+        self.captain.to_uppercase()
+    }
+}
+
+fn main() {
+    let golden_chest = TreasureChest {
+        captain: String::from("Longtail"),
+        treasure: "Gold",
+    };
+    
+    println!("{:?}", golden_chest.capital_captain());
+
+    let mut silver_chest = TreasureChest {
+        captain: String::from("heightmeal"),
+        treasure: String::from("  Silver  "),
+    };
+    silver_chest.clean_treasure();
+    println!("{:?}", silver_chest);
+
+    let special_chest = TreasureChest {
+        captain: String::from("firedog"),
+        treasure: ["Gold", "Silver", "Platinum"],
+    };
+    println!("{}", special_chest.amount_of_treasure());
+    println!("{:?}", special_chest);
+}
+
+
+
+
