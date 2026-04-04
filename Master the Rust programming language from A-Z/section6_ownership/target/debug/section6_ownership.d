@@ -1,0 +1,1 @@
+C:\Users\masha\solana-engineering-pathway\Master\ the\ Rust\ programming\ language\ from\ A-Z\section6_ownership\target\debug\section6_ownership.exe: C:\Users\masha\solana-engineering-pathway\Master\ the\ Rust\ programming\ language\ from\ A-Z\section6_ownership\src\main.rs
