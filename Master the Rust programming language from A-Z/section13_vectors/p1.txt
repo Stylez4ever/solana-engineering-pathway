@@ -1,0 +1,20 @@
+fn main() {
+    let mut pizza_diameters = vec![8, 10, 12, 14];
+    pizza_diameters.push(20);
+    pizza_diameters.push(50);
+    pizza_diameters.insert(1, 100);
+
+    let last_pizza_diameters = pizza_diameters.pop();
+
+    println!("{:?}", last_pizza_diameters);
+
+    println!("{:?}", pizza_diameters);
+
+    let third_pizza_diameters = pizza_diameters.remove(2);
+    println!("{:?}", pizza_diameters);
+
+
+
+    let pasta = vec!["Rigatoni", "Angel hair", "Fettucine"];
+    println!("{:?}", pasta)
+}

@@ -1,0 +1,19 @@
+fn main() {
+    let pizza_diameters = vec![8, 10, 12, 14];
+
+    let pepperoni = String::from("Pepperoni");
+    let mushroom = String::from("mushroom");
+    let sausage = String::from("Sausage");
+    let pizza_toppings = vec![pepperoni, mushroom, sausage];
+
+    let option = pizza_toppings.get(9);
+
+    match option {
+        Option::Some(topping) => println!("The topping is {topping}"),
+        Option::None => println!("No value at that index position"),
+    }
+
+    
+}
+
+

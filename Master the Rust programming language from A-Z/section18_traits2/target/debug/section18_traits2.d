@@ -1,0 +1,1 @@
+C:\Users\tyson\section18_traits2\target\debug\section18_traits2.exe: C:\Users\tyson\section18_traits2\src\lib.rs C:\Users\tyson\section18_traits2\src\main.rs C:\Users\tyson\section18_traits2\src\p1.rs C:\Users\tyson\section18_traits2\src\p2.rs C:\Users\tyson\section18_traits2\src\p3.rs C:\Users\tyson\section18_traits2\src\p4.rs
