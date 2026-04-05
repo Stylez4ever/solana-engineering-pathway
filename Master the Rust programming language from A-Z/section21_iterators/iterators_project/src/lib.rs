@@ -1,0 +1,3 @@
+mod p1_manual_iteration;
+mod p2_into_iterator_trait;
+mod p3_exhausting_the_iterator;
