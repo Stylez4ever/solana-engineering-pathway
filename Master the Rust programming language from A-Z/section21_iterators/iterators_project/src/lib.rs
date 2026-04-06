@@ -1,3 +1,13 @@
 mod p1_manual_iteration;
 mod p2_into_iterator_trait;
 mod p3_exhausting_the_iterator;
+mod p4_for_loop_with_iterator;
+mod p5_iter_method;
+mod p6_iter_mut_method;
+mod p7_hashmap_iteration;
+mod p8_string_iteration;
+mod p9_solving_problems_with_iteration;
+mod p10_for_each_method;
+mod p11_the_map_method;
+mod p12_the_collect_method;
+mod p13_the_map_method_2;

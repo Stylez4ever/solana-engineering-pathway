@@ -1,21 +1,16 @@
-
 fn main() {
-    let my_vector = vec![4, 8, 15, 16, 23, 42];
-    let mut my_iterator = my_vector.into_iter();
-    println!("{:?}", my_iterator);
+    let names = [
+        String::from("Jimmy"),
+        String::from("Cleveland"),
+        String::from("Boris"),
+    ];
 
-    println!("{:?}", my_iterator.next());
-    println!("{:?}", my_iterator.next());
-    println!("{:?}", my_iterator.next());
-    println!("{:?}", my_iterator.next());
-    println!("{:?}", my_iterator.next());
-    println!("{:?}", my_iterator.next());
-    println!("{:?}", my_iterator.next());
+    let name_length: Vec<_> = names.iter()
+    .map(|name| name.to_lowercase())
+    .map(|name| name.replace("i", "@@"))
+    .map(|name| name.len()).collect();
 
-
-
-    println!("{:?}", my_iterator);
-
+    println!("{:?}", name_length);
 
 
 }

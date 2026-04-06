@@ -1,0 +1,39 @@
+To iterate
+- means to perform repeatedly
+Iteration
+- is repeating the same operation on a sequence of items, one item at a time
+
+The iter method 
+- will create an iterator that yields immutable references to the 
+collections's
+
+The into_iter method
+- take ownership of the original collection's data
+
+The iter_mut method
+- wil create an iterator that yields mutable references to the collection's elements
+
+The for_each method
+- applies a consistent operation to every iterator element. it accepts a closure
+
+An adapter method
+- is one that transforms an iterator into another iterator based on some logic
+
+
+The collect method
+- exhausts the iterator and gathers the resulting values in a new collection type 
+
+
+ OWNERSHIP
+ for value in collection
+ for value in collection.into-iter()
+
+
+ IMMUTABLE REFERENCES
+ for value in &collection
+ for value in collection.iter()
+
+
+ MUTABLE REFERENCES
+ for value in &mut collection
+ for value in collection.iter_mut()
