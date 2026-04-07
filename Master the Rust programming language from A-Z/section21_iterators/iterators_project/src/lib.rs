@@ -11,3 +11,5 @@ mod p10_for_each_method;
 mod p11_the_map_method;
 mod p12_the_collect_method;
 mod p13_the_map_method_2;
+mod p14_the_filter_and_find_methods;
+mod p15_the_filter_and_find_methods_2;

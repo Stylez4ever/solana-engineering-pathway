@@ -37,3 +37,15 @@ The collect method
  MUTABLE REFERENCES
  for value in &mut collection
  for value in collection.iter_mut()
+
+
+The filter method
+- extracts a subset of values that satisfy a condition. Pass a closure that returns true
+for the elements to keep and false for the elements to exclude 
+
+The copied method
+- this is a useful when you have an iterator over &T, but you need an iterator over The
+
+The find method
+- will collect the first element for which the closure returns true 
+

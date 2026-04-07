@@ -14,7 +14,7 @@ struct TVChannel {
 
 
 
-fn main() {
+fn practice_15() {
     let channels = [
         TVChannel {
             name: String::from("ETV"),
