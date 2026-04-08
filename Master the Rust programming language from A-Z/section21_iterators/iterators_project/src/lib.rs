@@ -13,3 +13,7 @@ mod p12_the_collect_method;
 mod p13_the_map_method_2;
 mod p14_the_filter_and_find_methods;
 mod p15_the_filter_and_find_methods_2;
+mod p16_the_any_and_all_methods;
+mod p17_the_cloned_method;
+mod p18_the_filter_map_method;
+mod p19_flatten_method;

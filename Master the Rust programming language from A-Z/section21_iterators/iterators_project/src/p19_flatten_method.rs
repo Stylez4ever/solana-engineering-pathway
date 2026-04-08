@@ -1,4 +1,4 @@
-fn main() {
+fn practice_19() {
     let spreadsheet = vec![
         [100, 200, 300],
         [330, 600, 900],
