@@ -17,3 +17,7 @@ mod p16_the_any_and_all_methods;
 mod p17_the_cloned_method;
 mod p18_the_filter_map_method;
 mod p19_flatten_method;
+mod p20_the_flat_map_method;
+mod p21_the_enumerate_method;
+mod p22_partition_method;
+mod p23_the_zip_method;

@@ -1,4 +1,4 @@
-fn main() {
+fn practice_23() {
     let first_names = ["Malestoko", "Bafana", "Khomotso"];
     let last_names = ["Masha", "Maja", "Mnisi"];
 

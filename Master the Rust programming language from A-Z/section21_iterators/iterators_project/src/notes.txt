@@ -68,3 +68,12 @@ consumes the iterator in the process
 
 The filter_map method
 - both filters and transforms a subset of elements from an iterator
+
+The enumerate adapter
+- transforms an iterator so that it yields the index position along with the current element
+
+The partition method
+- groups and returns the value for which the closure returns true and for which the closure returns false
+
+The zip method 
+- combines two iterators togeher based on their elements having the same index position
