@@ -77,3 +77,11 @@ The partition method
 
 The zip method 
 - combines two iterators togeher based on their elements having the same index position
+
+The fold method
+- exhausts an iterator to build up and produce a single value at the end of iteration
+
+The reduce method
+- is similar to fold but it supplies the iterator's frist element as the starter value
+- it also returns an Option enum to account for the possibility of an empty iterator
+

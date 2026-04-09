@@ -1,17 +1,39 @@
 fn main() {
-    let first_names = ["Malestoko", "Bafana", "Khomotso"];
-    let last_names = ["Masha", "Maja", "Mnisi"];
 
-    let zip_it = first_names.iter().zip(last_names);
+    let numbers = vec![4, 8, 15, 16, 23, 42];
     
-    for (maina, difane) in zip_it {
-        println!("{maina} {difane}");
-    }
+    let total: i32 = numbers.iter().sum();
+    println!("{total}");
 
-    // create a vector of the full names using our basic method
-    let complete_name: Vec<String> = first_names.iter().zip(last_names)
-        .map(|(maina, difane)| format!("{maina} {difane}"))
-        .collect();
+    let product: i32 = numbers.iter().product();
+    println!("{product}");
 
-    println!("{:?}", complete_name);
+    let max = numbers.iter().max().unwrap();
+    println!("{max}");
+
+    let min = numbers.iter().min().unwrap();
+    println!("{min}");
+
+    let count = numbers.iter().count();
+    println!("{count}");  
+
+
+    // situations where the above methods don't work
+    let numbers = vec![4.6, 0.0/0.0, 6.2, f64::NAN];
+
+    let total:f64 = numbers
+        .iter()
+        .filter(|number| !number.is_nan())
+        .copied()
+        .fold(0.0, |total, current| total + current);
+    println!("{total}");
+
+    let max = numbers
+        .iter()
+        .copied()
+        .reduce(|accumulator, current| accumulator.max(current));
+    println!("{:?}", max)
+
+
+
 }

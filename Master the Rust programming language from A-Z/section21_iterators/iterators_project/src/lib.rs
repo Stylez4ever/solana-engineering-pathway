@@ -21,3 +21,6 @@ mod p20_the_flat_map_method;
 mod p21_the_enumerate_method;
 mod p22_partition_method;
 mod p23_the_zip_method;
+mod p24_the_fold_method;
+mod p25_the_reduce_method;
+mod p26_sum_product_max_min_count_methods;
