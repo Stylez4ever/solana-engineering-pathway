@@ -49,3 +49,31 @@ The copied method
 The find method
 - will collect the first element for which the closure returns true 
 
+The all method
+- is a consuming adaptor for iterator that tests whether every element of an iterator 
+satisfies a given predicate (a closure that returns true or false)
+
+The any method
+- is a consuming adaptor defined on the Iterator trait that checks if at least one element
+in an iterator satisfies a given predicate (a closure that returns true or false)
+
+The map method
+- is a functional programming tool used to transform elements within a collection (like a Vector, Array ot Iterator)
+or to transform the inner value of containers types Option or Result
+
+The for_each method
+- an iterator consumer (or terminal operation) that applies a given clousre to every elemenof an iterator
+it is used to process each item in a sequence, usually for side effects (such as printing or modifying data), and
+consumes the iterator in the process
+
+The filter_map method
+- both filters and transforms a subset of elements from an iterator
+
+The enumerate adapter
+- transforms an iterator so that it yields the index position along with the current element
+
+The partition method
+- groups and returns the value for which the closure returns true and for which the closure returns false
+
+The zip method 
+- combines two iterators togeher based on their elements having the same index position
