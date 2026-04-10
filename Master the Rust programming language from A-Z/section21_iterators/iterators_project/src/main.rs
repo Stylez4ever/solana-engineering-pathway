@@ -1,38 +1,54 @@
+#[derive(Debug)]
+struct GasStation {
+    snack_count: u32,
+    manager: String,
+    employee_count: u32,
+}
+
 fn main() {
+    let mut points = [3, 8, 1, 11, 5];
+    println!("{}", points.is_sorted());
 
-    let numbers = vec![4, 8, 15, 16, 23, 42];
-    
-    let total: i32 = numbers.iter().sum();
-    println!("{total}");
+    points.sort();
 
-    let product: i32 = numbers.iter().product();
-    println!("{product}");
+    println!("{points:?}");
+    println!("{}", points.is_sorted());
 
-    let max = numbers.iter().max().unwrap();
-    println!("{max}");
+    points.reverse();
 
-    let min = numbers.iter().min().unwrap();
-    println!("{min}");
+    println!("{points:?}");
+    println!("{}", points.is_sorted());
 
-    let count = numbers.iter().count();
-    println!("{count}");  
+    let mut exercises = ["squat", "bench", "deadlift"];
+    exercises.sort();
+    println!("{exercises:?}");
 
 
-    // situations where the above methods don't work
-    let numbers = vec![4.6, 0.0/0.0, 6.2, f64::NAN];
 
-    let total:f64 = numbers
-        .iter()
-        .filter(|number| !number.is_nan())
-        .copied()
-        .fold(0.0, |total, current| total + current);
-    println!("{total}");
 
-    let max = numbers
-        .iter()
-        .copied()
-        .reduce(|accumulator, current| accumulator.max(current));
-    println!("{:?}", max)
+
+    let mobal = GasStation {
+        snack_count: 100,
+        manager: String::from("Tyson Masha"),
+        employee_count: 3,
+    };
+
+    let exxon = GasStation {
+        snack_count: 130,
+        manager: String::from("Bafana Maja"),
+        employee_count: 4,
+    };
+
+    let shell = GasStation {
+        snack_count: 50,
+        manager: String::from("Khomotxo mnisi"),
+        employee_count: 2,
+    };
+
+
+
+
+
 
 
 

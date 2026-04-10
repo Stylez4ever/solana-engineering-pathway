@@ -85,3 +85,27 @@ The reduce method
 - is similar to fold but it supplies the iterator's frist element as the starter value
 - it also returns an Option enum to account for the possibility of an empty iterator
 
+The last method
+- which gives you the last element in the iterator
+
+The nth method
+- which gives an element based on its index position
+
+The nth_back method
+- which gives an element based on its index position but in reverse progressing from the back of the iterator
+
+The position method
+- which gives you the index position of an element that satisfies the clousre you pass in
+
+The take method
+- extracts a selected number of elements from the start of the iterator
+
+The rev method
+- is an adapter that will produce an iterator in reverse
+- progresses from the end of the range to the beginning
+
+The skip method
+- is an adapter that skips or bypasses a specified number of elements from the start of the iterator
+
+The step_by method
+- which allows us to iterate in intervals or steps
