@@ -26,3 +26,7 @@ mod p25_the_reduce_method;
 mod p26_sum_product_max_min_count_methods;
 mod p27_last_nth_nthback_position_method;
 mod p28_take_rev_skip_stepby_method;
+mod p29_sort_sortbykey_method;
+mod p30_the_lines_method;
+mod p31_collecting_command_line_argument_1;
+mod p32_collecting_command_line_argument_2;

@@ -1,55 +1,41 @@
+use std::{env, process};
+
 #[derive(Debug)]
-struct GasStation {
-    snack_count: u32,
-    manager: String,
-    employee_count: u32,
+struct Setting {
+    video_file: String,
+    subtitle: bool,
+    high_definition: bool,
 }
 
 fn main() {
-    let mut points = [3, 8, 1, 11, 5];
-    println!("{}", points.is_sorted());
+    let settings = collect_settings();
+    println!("{settings:?}");
 
-    points.sort();
+    
+}
 
-    println!("{points:?}");
-    println!("{}", points.is_sorted());
+fn collect_settings() -> Setting {
+    // target\debug\iterators_project.exe rust.mp4 true false nonsense
+    //       using the skips method    -> rust.mp4 true false nonsense
+    //       using the take method     -> rust.mp4 true false  \\ it limit us to only take 3 arguments 
+    let mut args = env::args().skip(1).take(3);
 
-    points.reverse();
+    let video_file_1 = args.next().unwrap_or_else(|| {
+        eprintln!("No video file specified btich");
+        process::exit(1);
+    });
 
-    println!("{points:?}");
-    println!("{}", points.is_sorted());
+    let mut settings = args
+        .map(|setting| setting.parse::<bool>().unwrap_or(false));
 
-    let mut exercises = ["squat", "bench", "deadlift"];
-    exercises.sort();
-    println!("{exercises:?}");
+    let subtitle_1 = settings.next().unwrap_or(false);
+    let high_definition_1 = settings.next().unwrap_or(false);
 
-
-
-
-
-    let mobal = GasStation {
-        snack_count: 100,
-        manager: String::from("Tyson Masha"),
-        employee_count: 3,
-    };
-
-    let exxon = GasStation {
-        snack_count: 130,
-        manager: String::from("Bafana Maja"),
-        employee_count: 4,
-    };
-
-    let shell = GasStation {
-        snack_count: 50,
-        manager: String::from("Khomotxo mnisi"),
-        employee_count: 2,
-    };
-
-
-
-
-
-
+    Setting { 
+        video_file: video_file_1,
+        subtitle: subtitle_1, 
+        high_definition: high_definition_1, 
+    }
 
 
 }

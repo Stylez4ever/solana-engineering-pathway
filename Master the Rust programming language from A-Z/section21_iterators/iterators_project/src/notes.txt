@@ -109,3 +109,6 @@ The skip method
 
 The step_by method
 - which allows us to iterate in intervals or steps
+
+The lines method
+- returns an iterator of the string's individual lines
