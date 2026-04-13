@@ -1,41 +1,62 @@
-use std::{env, process};
+use std::collections::HashSet;
 
 #[derive(Debug)]
-struct Setting {
-    video_file: String,
-    subtitle: bool,
-    high_definition: bool,
+struct Playlist {
+    songs: Vec<String>,
+    users: HashSet<String>,
 }
+
+impl FromIterator<(String, String)> for Playlist {
+    fn from_iter<T: IntoIterator<Item = (String, String)>>(iter: T) -> Self {
+        let mut songs = Vec::new();
+        let mut users = HashSet::new();
+        for (song, user) in iter {
+            songs.push(song);
+            users.insert(user);
+        }
+        Self { songs, users}
+    }
+}
+
 
 fn main() {
-    let settings = collect_settings();
-    println!("{settings:?}");
+    //let fifty_numbers = 1..=50;
 
+    //let results = Vec::from_iter(fifty_numbers.clone());
+    //println!("{results:?}");
+
+    //let results = fifty_numbers.clone().collect::<Vec<i32>>();
+    //println!("{:?}", results);
+
+    // the goal is to remove diplicates
+    //let unique_set: HashSet<_> = HashSet::from_iter(fifty_numbers.clone());
+    //println!("{:?}", unique_set);
+
+    //let unique_set = fifty_numbers.clone().collect::<HashSet<i32>>();
+    //println!("{:?}", unique_set);
     
-}
+    //let chars = ['H', 'e', 'l', 'l', 'o'];
+    //let greeting = String::from_iter(chars);
+    //println!("{greeting}");
 
-fn collect_settings() -> Setting {
-    // target\debug\iterators_project.exe rust.mp4 true false nonsense
-    //       using the skips method    -> rust.mp4 true false nonsense
-    //       using the take method     -> rust.mp4 true false  \\ it limit us to only take 3 arguments 
-    let mut args = env::args().skip(1).take(3);
+    let songs = [
+        (String::from("Namela thaba"), String::from("Thabang")),
+        (String::from("Mapedi nameng"), String::from("Thabang")),
+        (String::from("Bare monna ke se tunya"), String::from("Khomotxo")),
+        (String::from("Di tau txa bolaya"), String::from("Bafana")),
+    ];
 
-    let video_file_1 = args.next().unwrap_or_else(|| {
-        eprintln!("No video file specified btich");
-        process::exit(1);
-    });
+    //let playlist: Playlist = Playlist::from_iter(songs);
+    //println!("{playlist:?}");
 
-    let mut settings = args
-        .map(|setting| setting.parse::<bool>().unwrap_or(false));
+    let playlist: Playlist = songs.into_iter().collect::<Playlist>();
+    println!("{playlist:?}");
 
-    let subtitle_1 = settings.next().unwrap_or(false);
-    let high_definition_1 = settings.next().unwrap_or(false);
-
-    Setting { 
-        video_file: video_file_1,
-        subtitle: subtitle_1, 
-        high_definition: high_definition_1, 
-    }
 
 
 }
+
+
+
+
+

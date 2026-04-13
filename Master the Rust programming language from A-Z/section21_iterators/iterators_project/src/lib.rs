@@ -30,3 +30,5 @@ mod p29_sort_sortbykey_method;
 mod p30_the_lines_method;
 mod p31_collecting_command_line_argument_1;
 mod p32_collecting_command_line_argument_2;
+mod p33_reading_directory;
+mod p34_the_fromIterator;
