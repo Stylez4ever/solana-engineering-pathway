@@ -1,59 +1,96 @@
-use std::collections::HashSet;
+#![allow(unused, dead_code)]
+use std::{collections, env};
 
-#[derive(Debug)]
-struct Playlist {
-    songs: Vec<String>,
-    users: HashSet<String>,
+#[derive(Debug, PartialEq, Eq, Hash)]
+enum Product {
+    Blender,
+    Microwave,
+    Toaster,
+    Fridge,
 }
 
-impl FromIterator<(String, String)> for Playlist {
-    fn from_iter<T: IntoIterator<Item = (String, String)>>(iter: T) -> Self {
-        let mut songs = Vec::new();
-        let mut users = HashSet::new();
-        for (song, user) in iter {
-            songs.push(song);
-            users.insert(user);
-        }
-        Self { songs, users}
+#[derive(Debug)]
+struct CustomerOrder {
+    product: Product,
+    quantity: u32,
+    shipped: bool,
+}
+
+impl CustomerOrder {
+    fn new(product: Product, quantity: u32, shipped: bool) -> CustomerOrder {
+        CustomerOrder { product, quantity, shipped }
     }
 }
 
+#[derive(Debug)]
+struct Customer {
+    id: u32,
+    order: Vec<CustomerOrder>
+}
+
+
 
 fn main() {
-    //let fifty_numbers = 1..=50;
-
-    //let results = Vec::from_iter(fifty_numbers.clone());
-    //println!("{results:?}");
-
-    //let results = fifty_numbers.clone().collect::<Vec<i32>>();
-    //println!("{:?}", results);
-
-    // the goal is to remove diplicates
-    //let unique_set: HashSet<_> = HashSet::from_iter(fifty_numbers.clone());
-    //println!("{:?}", unique_set);
-
-    //let unique_set = fifty_numbers.clone().collect::<HashSet<i32>>();
-    //println!("{:?}", unique_set);
-    
-    //let chars = ['H', 'e', 'l', 'l', 'o'];
-    //let greeting = String::from_iter(chars);
-    //println!("{greeting}");
-
-    let songs = [
-        (String::from("Namela thaba"), String::from("Thabang")),
-        (String::from("Mapedi nameng"), String::from("Thabang")),
-        (String::from("Bare monna ke se tunya"), String::from("Khomotxo")),
-        (String::from("Di tau txa bolaya"), String::from("Bafana")),
+    let mut orders = vec![
+        CustomerOrder::new(Product::Blender, 3, false),
+        CustomerOrder::new(Product::Microwave, 1, true),
+        CustomerOrder::new(Product::Toaster, 2, false),
+        CustomerOrder::new(Product::Microwave, 5, true),
+        CustomerOrder::new(Product::Blender, 1, false),
+        CustomerOrder::new(Product::Fridge, 10, false),
     ];
-
-    //let playlist: Playlist = Playlist::from_iter(songs);
-    //println!("{playlist:?}");
-
-    let playlist: Playlist = songs.into_iter().collect::<Playlist>();
-    println!("{playlist:?}");
+ 
+    let customer_ids_by_order = [2, 1, 2, 3, 4, 1];
 
 
+    for order in orders.iter() {
+        if order.product == Product::Blender {
+            println!("{:#?}", order);
+        }
+    }
 
+    println!();
+    println!("......................................");
+    println!();
+
+    let filter_microves = orders
+        .iter()
+        .filter(|search| {
+            search.product == Product::Microwave});
+
+    let extract_quantity = filter_microves
+        .map(|mut total| {
+            total.quantity 
+        });
+
+    let mut total: u32 = 0; 
+    for sum in extract_quantity {
+        total = total + sum;
+    }
+    println!("The total microves quanity is: {:?}", total);
+
+    println!();
+    println!("......................................");
+    println!();
+
+    let args = env::args().skip(1);
+    //if args >= 5 {
+    //
+    //    let search =orders
+    //    .iter()
+    //    .filter(|search| search.quantity => 5;).collections::<Vec<CustomerOrder>;
+    //}
+
+
+    for arg in args {
+        println!("{arg}");
+    }
+
+    
+
+
+
+    
 }
 
 

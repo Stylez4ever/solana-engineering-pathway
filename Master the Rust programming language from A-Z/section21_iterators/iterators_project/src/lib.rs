@@ -1,3 +1,5 @@
+#![allow(unused, dead_code)]
+
 mod p1_manual_iteration;
 mod p2_into_iterator_trait;
 mod p3_exhausting_the_iterator;
@@ -31,4 +33,5 @@ mod p30_the_lines_method;
 mod p31_collecting_command_line_argument_1;
 mod p32_collecting_command_line_argument_2;
 mod p33_reading_directory;
-mod p34_the_fromIterator;
+mod p34_the_fromiterator;
+mod p35_wordle_project;
