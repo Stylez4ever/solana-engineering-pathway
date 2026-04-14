@@ -1,5 +1,5 @@
 #![allow(unused, dead_code)]
-use std::{collections, env};
+use std::{collections::{self, HashMap}, env};
 
 #[derive(Debug, PartialEq, Eq, Hash)]
 enum Product {
@@ -73,7 +73,7 @@ fn main() {
     println!("......................................");
     println!();
 
-    let args = env::args().skip(1);
+    let args = env::args().skip(1).take(1);
     //if args >= 5 {
     //
     //    let search =orders
@@ -82,10 +82,50 @@ fn main() {
     //}
 
 
+    
+    
+    let search: Vec<&CustomerOrder> =orders
+        .iter()
+        .filter(|search| {search.quantity >= 5})
+        .collect();
+
+    let search_2: Vec<&CustomerOrder> =orders
+        .iter()
+        .filter(|search| {search.quantity >= 2})
+        .collect();
+            
+
+
     for arg in args {
-        println!("{arg}");
+        if arg >= 5.to_string() { println!("{:#?}", search)
+            } else {
+                        println!("{:#?}", search_2);
+                   }
     }
 
+
+    println!();
+    println!("......................................");
+    println!();
+
+
+    let inventory = HashMap::new();
+    let unshipped = orders
+        .iter()
+        .filter(|locate| locate.shipped == false).map(|x| {
+            let mut num = 0;
+
+            
+            inventory.insert(x.product, x.quantity)
+
+        });
+
+    
+    
+
+    let inventory = HashMap::new();
+    inventory.insert(unshipped_prod, unshipped_quantity)
+    
     
 
 
