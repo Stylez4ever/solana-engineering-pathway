@@ -25,7 +25,7 @@ impl CustomerOrder {
 #[derive(Debug)]
 struct Customer {
     id: u32,
-    order: Vec<CustomerOrder>
+    orders: Vec<CustomerOrder>
 }
 
 
@@ -109,22 +109,57 @@ fn main() {
     println!();
 
 
-    let inventory = HashMap::new();
-    let unshipped = orders
-        .iter()
-        .filter(|locate| locate.shipped == false).map(|x| {
-            let mut num = 0;
+   // let inventory = HashMap::new();
+   // let unshipped = orders
+   //     .iter()
+   //     .filter(|locate| locate.shipped == false).map(|x| {
+   //         let mut num = 0;
 
             
-            inventory.insert(x.product, x.quantity)
+   //         inventory.insert(x.product, x.quantity)
 
+   //     });
+
+   // let inventory = HashMap::new();
+   // inventory.insert(unshipped_prod, unshipped_quantity)
+   let product_quantities = orders
+        .iter()
+        .filter(|locate| locate.shipped == false)
+        .fold(HashMap::new(), |mut data, order|{
+            let entry = data.entry(&order.product).or_insert(0);
+            *entry += order.quantity;
+            data
         });
 
-    
-    
+    println!("{:#?}", product_quantities); 
 
-    let inventory = HashMap::new();
-    inventory.insert(unshipped_prod, unshipped_quantity)
+
+    println!();
+    println!("......................................");
+    println!();
+
+    let shipped = orders
+        .iter()
+        .filter(|locate| locate.shipped == false)
+        .take(1).map(|ship_change| !ship_change.shipped);
+
+    for c in shipped {
+        println!("{:?}", c);
+    }
+
+    let mut customer_order = orders
+        .into_iter()
+        .zip(customer_ids_by_order)
+        .fold(HashMap::new(), |mut ids_to_orders, (order, customer_id)| {
+            let mut orders = ids_to_orders.entry(customer_id).or_insert(vec![]);
+            orders.push(order);
+            ids_to_orders
+        }).into_iter()
+        .map(|(id, orders)| Customer { id, orders}).collect::<Vec<Customer>>();
+
+    customer_order.sort_by_key(|customer| customer.id);
+    println!("{:#?}", customer_order);
+
     
     
 
