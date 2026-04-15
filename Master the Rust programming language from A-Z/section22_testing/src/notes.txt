@@ -1,0 +1,9 @@
+An assertion
+- is a verification that a statement is valid. To assert means to state a fact.
+
+A regression
+- is a bug introduced into working software
+- to regress means to return to a former or less developed state
+
+The assert not equal (assert_ne!)
+- marco validates that two values are not equal.
