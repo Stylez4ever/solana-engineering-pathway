@@ -1,0 +1,30 @@
+   0.064647900s  INFO prepare_target{force=false package_id=section22_testing v0.1.0 (C:\Users\masha\solana-engineering-pathway\Master the Rust programming language from A-Z\section22_testing) target="section22_testing"}: cargo::core::compiler::fingerprint: fingerprint error for section22_testing v0.1.0 (C:\Users\masha\solana-engineering-pathway\Master the Rust programming language from A-Z\section22_testing)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("section22_testing", ["lib"], "C:\\Users\\masha\\solana-engineering-pathway\\Master the Rust programming language from A-Z\\section22_testing\\src\\lib.rs", Edition2024) }
+   0.064777300s  INFO prepare_target{force=false package_id=section22_testing v0.1.0 (C:\Users\masha\solana-engineering-pathway\Master the Rust programming language from A-Z\section22_testing) target="section22_testing"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\masha\solana-engineering-pathway\Master the Rust programming language from A-Z\section22_testing\target\debug\.fingerprint\section22_testing-26523766e80576b7\test-lib-section22_testing`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+    Checking section22_testing v0.1.0 (C:\Users\masha\solana-engineering-pathway\Master the Rust programming language from A-Z\section22_testing)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.56s
