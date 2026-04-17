@@ -1,10 +1,10 @@
-trait TicketSeller {
+pub trait TicketSeller {
     fn sell_ticket(&mut self);
 }
 
 
 #[derive(Debug, PartialEq, Eq)]
-struct Museum {
+pub struct Museum {
     painting: Vec<String>,
     revenue: u32,
 }
@@ -43,13 +43,13 @@ impl TicketSeller for Museum {
 
 
 #[derive(Debug)]
-struct MovieTheater {
+pub struct MovieTheater {
     movies: Vec<String>,
     sales: u32,
 }
 
 impl MovieTheater {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Self {
             movies: vec![],
             sales: 0,
@@ -158,6 +158,7 @@ mod tests {
     }
 
     #[test]
+
     #[ignore]
     fn print_success() {
         println!("Success inside the function");

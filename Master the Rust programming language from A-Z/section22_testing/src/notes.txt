@@ -7,3 +7,15 @@ A regression
 
 The assert not equal (assert_ne!)
 - marco validates that two values are not equal.
+
+unit tests
+- a unit is a small, independent chunk of code or functionality
+- view it as one small building block of a larger application
+- testing an individual method is an example of a unit test
+- like we are zooming the lens in on one single isolated functionality
+
+integration tests
+- are larger in scope than unit tests, they may test a feature as a whole. they may test a 
+feature that will require for example, the communication or interaction of multiplie struct, 
+multiple types or function working together
+
