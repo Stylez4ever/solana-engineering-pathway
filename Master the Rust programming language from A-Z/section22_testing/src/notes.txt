@@ -19,3 +19,9 @@ integration tests
 feature that will require for example, the communication or interaction of multiplie struct, 
 multiple types or function working together
 
+settings for each times
+unit test- cargo test --lib
+integration test- cargo test --test '*'
+documentation test- cargo test --doc
+
+

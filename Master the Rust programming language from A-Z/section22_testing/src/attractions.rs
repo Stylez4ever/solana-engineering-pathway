@@ -5,22 +5,43 @@ pub trait TicketSeller {
 
 #[derive(Debug, PartialEq, Eq)]
 pub struct Museum {
-    painting: Vec<String>,
-    revenue: u32,
+    pub painting: Vec<String>,
+    pub revenue: u32,
 }
 
 impl Museum {
     const MAXIMUM_CAPACITY: usize = 3;
 
 
-    fn new() -> Self {
+    /// Creates a new Museum instatnce.
+    /// 
+    /// # Examples
+    /// ```
+    /// use section22_testing::attractions::Museum;
+    /// 
+    /// let museum = Museum::new();
+    /// let empty_vec: Vec<String> = Vec::new();
+    /// assert_eq!(museum.painting, empty_vec);
+    /// assert_eq!(museum.revenue, 0);
+    /// ```
+    pub fn new() -> Self {
         Self {
             painting: vec![],
             revenue: 0,
         }
     }
 
-    fn buy_painting(&mut self, new_painting: &str) {
+    /// Buys a painting for the museum
+    /// 
+    /// # Example
+    /// ```
+    /// use section22_testing::attractions::Museum;
+    /// 
+    /// let mut museum = Museum::new();
+    /// museum.buy_painting("Gohun goes SS2");
+    /// assert_eq!(museum.painting, vec!["Gohun goes SS2".to_string()]);
+    /// ```
+    pub fn buy_painting(&mut self, new_painting: &str) {
         if self.painting.len() >= Self::MAXIMUM_CAPACITY {
             panic!("Museum does not have storage space for another painting");
         }
@@ -44,8 +65,8 @@ impl TicketSeller for Museum {
 
 #[derive(Debug)]
 pub struct MovieTheater {
-    movies: Vec<String>,
-    sales: u32,
+    pub movies: Vec<String>,
+    pub sales: u32,
 }
 
 impl MovieTheater {
@@ -56,7 +77,7 @@ impl MovieTheater {
         }
     }
 
-    fn add_movies(&mut self, movie: &str) {
+    pub fn add_movies(&mut self, movie: &str) {
         self.movies.push(movie.to_string());
     }
 
