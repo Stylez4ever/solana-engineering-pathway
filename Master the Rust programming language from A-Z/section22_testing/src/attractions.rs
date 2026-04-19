@@ -1,3 +1,5 @@
+#![allow(unused, dead_code)]
+
 pub trait TicketSeller {
     fn sell_ticket(&mut self);
 }
