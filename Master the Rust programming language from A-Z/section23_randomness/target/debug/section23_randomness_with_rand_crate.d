@@ -1,0 +1,1 @@
+C:\Users\masha\solana-engineering-pathway\Master\ the\ Rust\ programming\ language\ from\ A-Z\section23_randomness_with_rand_crate\target\debug\section23_randomness_with_rand_crate.exe: C:\Users\masha\solana-engineering-pathway\Master\ the\ Rust\ programming\ language\ from\ A-Z\section23_randomness_with_rand_crate\src\main.rs
