@@ -10,10 +10,5 @@ fn practice_1() {
         .expect("Unable to parse NaiveDate from string");
 
     println!("{:?}", my_birthday);
-
-
-
-
-
 }
 

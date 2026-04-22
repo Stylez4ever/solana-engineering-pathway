@@ -1,0 +1,9 @@
+use chrono::prelude::*;
+
+
+fn main() {
+    let someday ="31/Oct/1995 18:07:54 -0600";
+    let dt = DateTime::parse_from_str(someday, "%d/%b/%Y %H:%M:%S %z");
+    println!("{:?}", dt);
+}
+
