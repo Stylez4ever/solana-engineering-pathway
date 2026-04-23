@@ -1,5 +1,9 @@
 [package]
+<<<<<<< HEAD
+name = "regular_expressions"
+=======
 name = "project_regular_expressions"
+>>>>>>> 28661da5dd0e1ca1a1f353a55b34bf51af4c3239
 version = "0.1.0"
 edition = "2024"
 
