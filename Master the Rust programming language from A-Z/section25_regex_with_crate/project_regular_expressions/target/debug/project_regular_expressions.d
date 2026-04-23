@@ -1,0 +1,1 @@
+/workspaces/solana-engineering-pathway/Master\ the\ Rust\ programming\ language\ from\ A-Z/section25_regex_with_crate/project_regular_expressions/target/debug/project_regular_expressions: /workspaces/solana-engineering-pathway/Master\ the\ Rust\ programming\ language\ from\ A-Z/section25_regex_with_crate/project_regular_expressions/src/main.rs
