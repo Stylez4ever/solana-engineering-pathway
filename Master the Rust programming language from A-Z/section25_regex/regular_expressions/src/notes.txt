@@ -1,0 +1,36 @@
+a regular expression (RegEx)
+- is a search pattern for text.
+
+\d = Any numeric digit at all
+\D = Any character in the seach string that is not a digit
+\w = Only charactors and digits
+\W = Any match anywhere for anything that is not a charactor and not a digit
+\s = Mach space or whitespace
+\S = Match Anything that is not whitespace
+
+\b = looks for a word boundary. A word boundary represents a position or gap between
+a word character (alphabetic characters and digits) as well as a non-word character
+like whitespace or punctuation.
+
+a dot(.) is a meta character
+- a meta character is a special character in a regular expression search pattern that
+means something special
+
+The square brackets []
+- deifne a set of characters to be matched
+- inside the square brackets we can write any sequence of characters
+
+curly braces
+- accept a number wothin them, and that number will specify the exact number
+of matches to look for with the preceding search symbol
+
+The anchor
+- is a special symbol within our regular expression that marks the 
+beginning or end of a string
+- To anchor means to fix something firmly in place
+
+A capure group 
+- isolates a segment/chunk of the pattern
+
+The replace_all method
+- swaps all occurences of the RegEx search pattern within the haystack
