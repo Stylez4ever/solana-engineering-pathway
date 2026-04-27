@@ -1,0 +1,10 @@
+The Box smart pointer
+- stores a piece of data on the heap
+
+The Box
+- is an owned type that is a contaier around the raw pointer that holds
+the memory address of the allocated heap data
+
+a linked list
+- is a data structure that consists of a linear collection of connected 
+nodes
