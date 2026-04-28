@@ -8,3 +8,6 @@ the memory address of the allocated heap data
 a linked list
 - is a data structure that consists of a linear collection of connected 
 nodes
+
+a recursion
+- is when a function or a method calls itself within its own body
