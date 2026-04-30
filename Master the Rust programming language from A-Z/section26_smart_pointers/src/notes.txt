@@ -11,3 +11,9 @@ nodes
 
 a recursion
 - is when a function or a method calls itself within its own body
+
+*When given a reference to a type that implements the [Deref trait], 
+Rust will convert it into a reference of another type if necessary
+
+a trait object
+- is an instance of some type that implements a specific trait
