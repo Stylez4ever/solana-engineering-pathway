@@ -1,0 +1,3 @@
+interior mutability
+- is a rust desgin pattern where a value can mutate its internal state
+even when accessed through an immutable reference
