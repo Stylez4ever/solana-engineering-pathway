@@ -7,7 +7,7 @@
 ## 📊 Current Progress
 - **Professional Pivot:** Mechanical Draftsman ➡️ Blockchain Engineer
 - **Rustlings Exercises:** [▓▓▓▓▓▓░░░░] 60% (Goal: 94/94)
-- **70-Hour Rust Masterclass:** [▓▓▓▓▓▓▓▓░░░] 60/70 Hours
+- **70-Hour Rust Masterclass:** [▓▓▓▓▓▓▓▓▓▓▓] 70/70 Hours
 - **Foundations:** 3 Months of Java (OOPS, Logic, Data Types)
 
 ## 📂 Repository Structure
